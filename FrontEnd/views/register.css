@@ -1,0 +1,27 @@
+
+.register-title{
+   
+   font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #011e1f;
+   width: 40%;
+   left: 30%;
+  bottom: 100%;
+   position: absolute;
+ 
+ 
+}
+.input{
+       
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    
+}
+.register-form{
+    position: absolute;
+    width: 100%;
+    top: 10%;
+}

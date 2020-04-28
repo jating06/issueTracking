@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../bower_components/angular/angular.min.js"></script>
+    
+    <script src="../scripts/register/registercontroller.js"></script>
+</head>
+<body>
+    <div ng-controller='ctrl2' class="register-form">
+    <form  style="text-align: center" action="#/" name='f2'>
+        <h1 class="register-title">Register New Employee</h1>
+        <br>
+
+     <input type="text" required ng-model="name" class="input" placeholder="Enter Employee Id">
+      <br>
+      <br>
+      <input type="password" placeholder="Enter Password" required ng-model="password" class="input">
+      <br>
+      <br>
+      <input type="text" placeholder="Enter Phone no" required pattern="[0-9]{10}" ng-model="phoneNo" class="input">
+      <br>
+      <br>
+     <input type="email"  placeholder="Enter email Id" required ng-model="emailId" class="input">
+      <br>
+      <br>
+      role
+      <select required ng-model="role" >
+          <option value="">choose role</option>
+          <option value="developer">developer</option>
+          <option value="tester">tester</option>
+          </select><br>
+          <br>
+          <br>
+        <button ng-click="register()"  style="width:10%" class="btn btn-info" ng-disabled='f2.$invalid'>register</button>
+        
+
+
+
+    </form>
+</div>
+</body>
+</html>

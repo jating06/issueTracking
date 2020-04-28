@@ -1,0 +1,50 @@
+.signout{
+    background-color: coral;
+    border: none;
+    height:40px;
+    width:100px;
+    left: 90%;
+    position: absolute;
+    top: 2%;
+     border-radius: 50px;
+     
+
+
+}
+.assigned{
+    left: 5%;
+    position: absolute
+}
+.sumbitbug{
+    background-color: transparent;
+  
+    outline: 2px solid blue;
+    
+    color: blue;
+    font-size: 15px;
+    border: none;
+    height:40px;
+    width:100px;
+     left: 81%;
+     top: 2%;
+    position: absolute;
+    
+     border-radius: 10px;
+}
+.back-button{
+    background-color: transparent;
+  
+    outline: 2px solid green;
+    
+    color: green;
+    font-size: 15px;
+    border: none;
+    height:40px;
+    width:100px;
+     left: 40px;
+     top: 2%;
+    position: absolute;
+    
+     border-radius: 10px;
+
+}

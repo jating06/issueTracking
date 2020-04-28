@@ -1,0 +1,50 @@
+.Description{
+    position: absolute;
+    top:40%
+    
+}
+.issue{
+    position: absolute;
+    top:10%;
+    
+ 
+}
+
+.issue-2{
+    position: absolute;
+    top:16%;
+    left:2%;
+
+}
+.textselection{
+    -webkit-user-select:none; 
+        -webkit-touch-callout:none; 
+             -moz-user-select:none; 
+             -ms-user-select:none; 
+             user-select:none;    
+  
+}
+.textselection:hover{
+    cursor: pointer;
+    background: grey
+}
+.box{
+    border: 2px; 
+    text-align: center;
+    overflow: hidden;
+    position: absolute;
+    left: 24%;
+    top: 25%;
+    width:50%;
+    height:50%;
+
+}
+.ellipsis {
+    max-width: 40px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.status{
+    
+}

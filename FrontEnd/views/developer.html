@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+
+</head>
+
+
+<body>
+   <div id='developer' ng-controller='ctrl4'>
+<button ng-click=signout() class='signout'>signout <i class="fa fa-sign-out"></i></button>
+<br>
+    <div ng-hide='flag' >
+    <h1 style="text-align: center" >ASSIGNED BUGS</h1>
+         
+        <table style="width: 100%" class="table">
+        <thead class="thead-dark">
+           <tr>
+            <th>Bug</th>
+            <th>Report To</th>
+            <th>Severity</th>
+            <th>TimeAlloted(hrs)</th>
+            <th>AllotedOn</th>
+            <th>Currentstatus</th>
+            <th>NewStatus</th>
+   
+        
+           
+       
+            <tr   ng-repeat="developers in list|orderBy: developers.AllotedOn:true" class=textselection  >
+             
+                <td class=".ellipsis"  ng-click=func(developers)>{{developers.issue|limitTo:10}}....</td>
+                <td  ng-click=func(developers) >{{developers.ReportTo}}</td>
+                <td  ng-click=func(developers) >{{developers.Severity}}</td>
+                <td   ng-click=func(developers)>{{developers.TimeAlloted}}</td>
+                <td ng-click=func(developers) >Date:-{{developers.AllotedOn| date: 'dd/MM/yyyy'}}  Time:-{{developers.AllotedOn| date: 'HH:mm:ss'}}</td>
+                <td  ng-click=func(developers) >
+                     <div ng-hide='statusflag' ng-style=Color(developers.Status) >
+                            {{developers.Status}}
+                     </div>
+                            
+                      
+                    
+                       <div ng-show='statusflag' ng-style=Color(status)>
+                            {{status}}
+                  
+                      </div>
+                
+                   
+                   
+                </td>
+                <td>
+                        <select ng-model='status'   ng-change="statusChange(developers,status) ; statusflag=true">
+                                <option value="">Select</option>
+                                <option value="not resolved" >Not Resolved</option>
+                                <option value="solved" >solved</option>
+                                <option value="NAB">NAB</option>
+                                <option value="TBD" >TBD</option>
+                </td>
+        </table>
+        </div>
+        <div ng-show='flag' style="text-align: center" >
+           <div class='issue'>
+            <h2 style="text-align: left">
+              Issue
+            </h2>
+            <br>
+            <p ng-model='issue' style="text-align: left ; outline:  black;"></p>
+                {{issue}}
+            </p>
+        </div>
+        <div class='Description'>
+            <h2>Description</h2>
+            <br>
+            <p ng-model='descr' style="text-align: left ">{{descr}}</p>
+        </div>
+        </div>
+    </div>
+    
+</body>
+</html>
